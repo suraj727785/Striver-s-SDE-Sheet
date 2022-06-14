@@ -11,6 +11,6 @@ def uniquePaths(m,n):
         else:
             dp[i][j]=solve(m,n,i+1,j,dp) + solve(m,n,i,j+1,dp)
             return dp[i][j]
-    return solve(m,n,0,0,[[-1]*(n+1)]*(m+1))
+    return solve(m,n,0,0,[[-1 for i in range(n+1)] for j in range(m+1)])
 
 print(uniquePaths(3,7))
