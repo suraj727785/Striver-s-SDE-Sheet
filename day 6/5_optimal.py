@@ -1,16 +1,23 @@
-# question: https://leetcode.com/problems/linked-list-cycle/
+# question: https://leetcode.com/problems/linked-list-cycle-ii/
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-def hasCycle(head):
+def detectCycle(head):
     slow,fast=head,head
     while(fast!=None and fast.next!=None):
         slow=slow.next
         fast=fast.next.next
         if slow==fast:
-            return True
-    return False 
+            break
+    if fast==None or fast.next==None:
+        return None
+    fast=head
+    while(slow!=fast):
+        slow=slow.next
+        fast=fast.next
+    return slow
+    
 
     
 
@@ -27,4 +34,4 @@ temp1=list1
 while(temp1.val!=cycleAt):
     temp1=temp1.next
 end.next=temp1
-print(hasCycle(list1))
+print(detectCycle(list1).val)
