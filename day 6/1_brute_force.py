@@ -1,8 +1,5 @@
 # question: https://leetcode.com/problems/intersection-of-two-linked-lists/
 
-from pickle import NONE
-
-
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
