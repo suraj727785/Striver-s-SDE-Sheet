@@ -11,7 +11,6 @@ def maximumMeetings(n,start,end):
             res-=1
             j+=1
         i+=1
-    print(start,end)
     return res
 
 
