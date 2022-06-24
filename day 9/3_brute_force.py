@@ -1,4 +1,4 @@
-# Question: https://leetcode.com/problems/subsets-ii/submissions/
+# Question: https://leetcode.com/problems/combination-sum/
 
 
 def combinationSum(candidates,ind, target,res,r):
