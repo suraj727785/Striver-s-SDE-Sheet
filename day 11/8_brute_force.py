@@ -12,7 +12,7 @@ def chessTournament(positions, n , c):
         return False
 
     positions.sort()
-    low,high=positions[0],positions[-1]-positions[0]
+    low,high=1,positions[-1]-positions[0]
     res=-1
     while(low<=high):
         mid=(low+high)//2
