@@ -2,6 +2,8 @@
 
 def findMedianSortedArrays(nums1, nums2):
     n1,n2=len(nums1),len(nums2)
+    if n2<n1:
+        return findMedianSortedArrays(nums2,nums1)
     low,high=0,n1
     while(low<=high):
         part1=(low+high)//2
